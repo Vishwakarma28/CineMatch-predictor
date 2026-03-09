@@ -7,6 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from urllib.parse import quote
 import requests
 from dotenv import load_dotenv
+load_dotenv()
 import os
 
 app = Flask(__name__)
