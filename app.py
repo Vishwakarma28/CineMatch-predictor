@@ -14,8 +14,6 @@ CORS(app)
 
 app.config['TMDB_API_KEY'] = os.getenv("TMDB_API_KEY")
 
-tmdb_api = os.getenv("TMDB_API_KEY")
-
 # Load saved objects
 indices = joblib.load('indices.pkl')
 tfidf_matrix = joblib.load('tfidf_matrix.pkl')
@@ -39,7 +37,7 @@ def recommend(title, n=10):
 
 def get_movie_details(movie_title):
 
-    api_key = tmdb_api 
+    api_key = os.getenv("TMDB_API_KEY") 
     movie_title = movie_title.replace("  ", " ").strip()
 
     try:
@@ -80,7 +78,7 @@ def get_movie_details(movie_title):
 
 def get_movie_poster(movie_title):
 
-    api_key = tmdb_api 
+    api_key = os.getenv("TMDB_API_KEY") 
     movie_title = movie_title.replace("  ", " ").strip()
     
 
