@@ -13,6 +13,7 @@ app = Flask(__name__)
 CORS(app)
 
 app.config['TMDB_API_KEY'] = os.getenv("TMDB_API_KEY")
+print("TMDB KEY:", os.getenv("TMDB_API_KEY"))
 
 # Load saved objects
 indices = joblib.load('indices.pkl')
