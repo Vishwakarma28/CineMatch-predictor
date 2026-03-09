@@ -39,6 +39,8 @@ def recommend(title, n=10):
 def get_movie_details(movie_title):
 
     api_key = os.getenv("TMDB_API_KEY") 
+    print("TMDB KEY:", os.getenv("TMDB_API_KEY"))
+    
     movie_title = movie_title.replace("  ", " ").strip()
 
     try:
@@ -80,6 +82,7 @@ def get_movie_details(movie_title):
 def get_movie_poster(movie_title):
 
     api_key = os.getenv("TMDB_API_KEY") 
+    print("TMDB KEY:", os.getenv("TMDB_API_KEY"))
     movie_title = movie_title.replace("  ", " ").strip()
     
 
