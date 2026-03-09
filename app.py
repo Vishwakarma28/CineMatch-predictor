@@ -11,7 +11,7 @@ load_dotenv()
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://cinematch-predictor.vercel.app"])
 
 app.config['TMDB_API_KEY'] = os.getenv("TMDB_API_KEY")
 print("TMDB KEY:", os.getenv("TMDB_API_KEY"))
