@@ -1,0 +1,7 @@
+Flask
+flask-cors
+joblib
+pandas
+requests
+scikit-learn
+waitress
